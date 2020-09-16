@@ -1,9 +1,10 @@
 /*公共样式*/
+/*版心*/
 .container {
     width: 1200px;
     margin: 0 auto;
 }
-
+/* a链接样式 */
 .link {
     color: #4d555d;
 }
@@ -11,13 +12,18 @@
 .link:hover {
     color: #f01414;
 }
-
+/*过渡*/
 .transition {
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+}
+/*文字隐藏*/
+.text-hidden {
+    text-indent: -99999px;
+    overflow: hidden;
 }
 
 /*icon*/
@@ -71,12 +77,9 @@
 .dropdown-arrow {
     display: inline-block;
     line-height: 1;
-    /*background-repeat: no-repeat;*/
     vertical-align: middle;
 
 }
-
-
 
 .dropdown-layer {
     display: none;
@@ -148,4 +151,27 @@
 .menu-active .dropdown-toggle {
     background-color: #fff;
     border-color: #cdd0d4;
+}
+
+
+
+/*search*/
+.search {
+    position: relative;
+    border: 1px solid #cfd2d5;
+}
+.search-inputBox {
+    width: 585px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.search-btn {
+
+}
+.search-layer {
+
+}
+.search-layer-item {
+
 }
