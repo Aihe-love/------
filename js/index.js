@@ -1,34 +1,30 @@
-// nav-site
-// nav-site  第一种方法  此方法会引起回流和重绘不建议使用
-// $('.dropdown').hover(function () {
-//     let dropdown = $(this);
-//     dropdown.find($('.dropdown-toggle')).css({
-//         'background': '#fff',
-//         'border-color':'#cdd0d4'
-//     })
-//     dropdown.find($('.dropdown-arrow')).css({
-//         'background-image': 'url("./img/dropdown-arrow-active.png")',
-//         'border-color':'#cdd0d4'
-//     })
-//
-//     dropdown.find($('.dropdown-layer')).show();
-// },function () {
-//     let dropdown = $(this);
-//     dropdown.find($('.dropdown-toggle')).css({
-//         'background': '',
-//         'border-color':'#f3f5f7'
-//     })
-//     dropdown.find($('.dropdown-arrow')).css({
-//         'background-image': 'url("./img/dropdown-arrow.png")',
-//         'border-color':'#cdd0d4'
-//     })
-//
-//     dropdown.find($('.dropdown-layer')).hide();
-// })
+(function ($) {
+    // 按需加载
+    $('.dropdown').on('dropdown-show', function (e) {
+        let $this = $(this);
+        let dataLoad = $this.data('load');
 
-// nav-site第二种方法   直接使用添加class的方式可以减少重绘和回流
-// $('.dropdown').hover(function () {
-//     $(this).addClass('dropdown-active');
-// },function () {
-//     $(this).removeClass('dropdown-active');
-// })
+        if (!dataLoad) return;
+
+        if (!$this.data('loaded')) {
+            let $layer = $this.find($('.dropdown-layer'));
+            let html = '';
+            $.getJSON(dataLoad, function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    const argument = data[i];
+                    html += `
+                    <li><a href="${argument.url}" target="_blank" class="menu-item">${argument.name}</a></li>
+                    `
+                }
+                $layer.html(html);
+                $this.data('loaded', true)
+            })
+        }
+    })
+
+    // 使用下拉菜单组件
+    $('.dropdown').dropdown({
+        css3: true,
+        js: false
+    })
+})(jQuery)
