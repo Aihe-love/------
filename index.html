@@ -21,14 +21,16 @@
         </ul>
         <ul class="fr">
             <li class="menu dropdown fl" data-active="menu">
-                <a href="###" target="_blank" class="dropdown-toggle link  transition">我的慕淘<i class="dropdown-arrow icon transition">&#xe609;</i></a>
+                <a href="###" target="_blank" class="dropdown-toggle link  transition">我的慕淘<i
+                        class="dropdown-arrow icon transition">&#xe609;</i></a>
                 <ul class="dropdown-layer dropdown-left">
                     <li><a href="###" target="_blank" class="menu-item">已买到的宝贝</a></li>
                     <li><a href="###" target="_blank" class="menu-item">我的足迹</a></li>
                 </ul>
             </li>
             <li class="menu dropdown fl" data-active="menu">
-                <a href="###" target="_blank" class="dropdown-toggle link transition">收藏夹<i class="dropdown-arrow icon transition">&#xe609;</i></a>
+                <a href="###" target="_blank" class="dropdown-toggle link transition">收藏夹<i
+                        class="dropdown-arrow icon transition">&#xe609;</i></a>
                 <ul class="dropdown-layer dropdown-left">
                     <li><a href="###" target="_blank" class="menu-item">收藏的宝贝</a></li>
                     <li><a href="###" target="_blank" class="menu-item">收藏的店铺</a></li>
@@ -38,7 +40,8 @@
                 <a href="###" target="_blank" class="nav-site-category link">商品分类</a>
             </li>
             <li class="menu dropdown fl" data-active="menu" data-load="js/dropdown-seller.json">
-                <a href="###" target="_blank" class="dropdown-toggle link transition">卖家中心<i class="dropdown-arrow icon transition">&#xe609;</i></a>
+                <a href="###" target="_blank" class="dropdown-toggle link transition">卖家中心<i
+                        class="dropdown-arrow icon transition">&#xe609;</i></a>
                 <ul class="dropdown-layer dropdown-left">
                     <li class="dropdown-loading"></li>
                     <!--  <li><a href="###" target="_blank" class="menu-item">免费开店</a></li>
@@ -50,7 +53,8 @@
                 </ul>
             </li>
             <li class="nav-site-service menu dropdown fl" data-active="menu">
-                <a href="###" target="_blank" class="dropdown-toggle link transition">联系客服<i class="dropdown-arrow icon transition">&#xe609;</i></a>
+                <a href="###" target="_blank" class="dropdown-toggle link transition">联系客服<i
+                        class="dropdown-arrow icon transition">&#xe609;</i></a>
                 <ul class="dropdown-layer dropdown-right">
                     <li><a href="###" target="_blank" class="menu-item">消费者客服</a></li>
                     <li><a href="###" target="_blank" class="menu-item">卖家客服</a></li>
@@ -66,27 +70,35 @@
     <div class="container">
         <!--优化logo-->
         <h1 class="fl"><a href="./index.html" class="header-logo text-hidden">慕淘网</a></h1>
-        <div class="search fl">
-            <form action="https://s.taobao.com/search">
-                <input type="text" name="q" autocomplete="off" placeholder="本网页星辰制作" class="search-inputBox fl">
+        <div id="header-search" class="search fl">
+            <form action="https://s.taobao.com/search" class="search-form">
+                <input type="text" name="q" autocomplete="off" placeholder="本网页stars星辰制作" class="search-inputBox fl">
                 <input type="submit" value="搜索" class="search-btn fl">
             </form>
             <ul class="search-layer">
-                <li class="search-layer-item">111</li>
-                <li class="search-layer-item">111</li>
-                <li class="search-layer-item">111</li>
-                <li class="search-layer-item">111</li>
+                <!--<li class="search-layer-item text-ellipsis">111</li>-->
+                <!--<li class="search-layer-item text-ellipsis">111</li>-->
+                <!--<li class="search-layer-item text-ellipsis">111</li>-->
+                <!--<li class="search-layer-item text-ellipsis">111</li>-->
             </ul>
         </div>
-        <div class="header-cart fr"></div>
+        <div class="menu dropdown header-cart fr" data-active="menu">
+            <a href="javascript:;" class="dropdown-toggle"><i class="icon">&#xe60b;</i>&nbsp;&nbsp;&nbsp;购物车
+                &nbsp;&nbsp;|&nbsp;&nbsp; <span class="header-cart-num">0</span>&nbsp;<i
+                        class="dropdown-arrow icon transition">&#xe609;</i></a>
+            <ul class="dropdown-layer dropdown-right">
+                <!--<li class="dropdown-loading"></li>-->
+                <!--<li><a href="javascript:;" target="_blank" class="menu-item">123456</a></li>-->
+                <!--<li><a href="javascript:;" target="_blank" class="menu-item">123456</a></li>-->
+                <li class="header-cart-no"><i class="icon header-cart-no-img">&#xe600;</i>购物车里还没有商品<br>赶紧去选购吧!</li>
+
+                <!--<li class="header-cart-off">最近加入的商品</li>-->
+                <!--<li class="header-cart-off"></li>-->
+                <!--<li class="header-cart-off"></li>-->
+            </ul>
+        </div>
     </div>
 </header>
-
-
-
-
-
-
 
 
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -100,6 +112,8 @@
 <script src="js/showHide.js"></script>
 <!--下拉菜单组件-->
 <script src="js/dropdown.js"></script>
+<!--search搜索框组件-->
+<script src="js/search.js"></script>
 <!--主页脚本-->
 <script src="js/index.js"></script>
 </body>

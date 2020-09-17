@@ -22,9 +22,61 @@
         }
     })
 
-    // 使用下拉菜单组件
+    // 使用下拉菜单menu组件
     $('.dropdown').dropdown({
         css3: true,
         js: false
     })
+
+
+    // header search
+    let $headerSearch = $('#header-search');
+    let html = '';
+    let maxNum = 10;
+    $headerSearch.on('search-getData', function (e, data) {
+        let $this = $(this);
+        html = createHeaderSearch(data, maxNum);
+        $this.search('appendLayer', html)
+
+        if (html) {
+            $this.search('showLayer')
+        } else {
+            $this.search('hideLayer')
+        }
+
+    }).on('search-noData', function (e) {
+        $(this).search('hideLayer').search('appendLayer', '')
+
+    }).on('click', '.search-layer-item', function (e) {
+        console.log($(this).html())
+        $headerSearch.search('setInputVal', $(this).html())
+        $headerSearch.search('submit')
+    })
+    $headerSearch.search({
+        autocomplete: true,
+        css3: false,
+        js: false,
+        animation: 'fade',
+        getDataInterVal: 0
+    })
+
+    function createHeaderSearch(data, maxNum) {
+        let dataNum = data['result'].length;
+        let html = '';
+        if (dataNum === 0) {
+            return '';
+        }
+        for (let i = 0; i < dataNum; i++) {
+            if (i >= maxNum) break;
+
+            html += `
+                <li class="search-layer-item text-ellipsis">${data['result'][i][0]}</li>
+
+                `
+        }
+        return html;
+
+    }
+
+
 })(jQuery)
