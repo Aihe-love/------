@@ -1,32 +1,25 @@
 (function ($) {
-    // 按需加载
-    $('.dropdown').on('dropdown-show', function (e) {
-        let $this = $(this);
-        let dataLoad = $this.data('load');
-
-        if (!dataLoad) return;
-
-        if (!$this.data('loaded')) {
-            let $layer = $this.find($('.dropdown-layer'));
-            let html = '';
-            $.getJSON(dataLoad, function (data) {
-                for (let i = 0; i < data.length; i++) {
-                    const argument = data[i];
-                    html += `
-                    <li><a href="${argument.url}" target="_blank" class="menu-item">${argument.name}</a></li>
-                    `
-                }
-                $layer.html(html);
-                $this.data('loaded', true)
-            })
-        }
-    })
 
     // 使用下拉菜单menu组件
-    $('.dropdown').dropdown({
+    $('.menu').on('dropdown-show', function (e) {
+        loadOne($(this), buildMenuItem)
+    }).dropdown({
         css3: true,
         js: false
     })
+
+    function buildMenuItem($elem, data) {
+        let html = '';
+        if (data.length === 0) return;
+
+        for (let i = 0; i < data.length; i++) {
+            const datum = data[i];
+            html += `
+                <li><a href="${datum.url}" target="_blank" class="menu-item">${datum.name}</a></li>
+            `;
+            $elem.find($('.dropdown-layer')).html(html)
+        }
+    }
 
 
     // header search
@@ -76,6 +69,53 @@
         }
         return html;
 
+    }
+
+    // focus-category
+    $('#focus-category').find($('.dropdown')).on('dropdown-show', function () {
+        loadOne($(this), createCategoryDetails);
+    }).dropdown({
+        css3: false,
+        js: false,
+        animation: 'fade'
+    })
+
+    function createCategoryDetails($elem, data) {
+        console.log($elem)
+        console.log(data)
+        let html = '';
+        for (let i = 0; i < data.length; i++) {
+            const datum = data[i];
+            html += `
+            <dl class="category-details cf"><dt class="category-details-title fl"><a href="###" target="_blank" class="category-details-title-link">${data[i].title}</a></dt><dd class="category-details-item fl">
+            `;
+            for (let j = 0; j < datum.items.length; j++) {
+                const datumElement = datum.items[j];
+                html += `
+                    <a href="###" target="_blank" class="link">${datumElement}</a>
+                `
+            }
+
+            html += `</dd></dl>`;
+        }
+        $elem.find('.dropdown-layer').html(html)
+    }
+
+
+    // 获取数据
+    function loadOne($elem, success) {
+        let dataLoad = $elem.data('load');
+
+        if (!dataLoad) return;
+
+        if (!$elem.data('loaded')) {
+            $elem.data('loaded', true);
+            $.getJSON(dataLoad).done(function (data) {
+                if (typeof success === 'function') success($elem, data);
+            }).fail(function () {
+                $elem.data('loaded', false);
+            })
+        }
     }
 
 

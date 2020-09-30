@@ -82,21 +82,21 @@
                 <!--<li class="search-layer-item text-ellipsis">111</li>-->
             </ul>
         </div>
-        <div class="menu dropdown header-cart fr" data-active="menu">
-            <a href="javascript:;" class="dropdown-toggle"><i class="icon">&#xe60b;</i>&nbsp;&nbsp;&nbsp;购物车
-                &nbsp;&nbsp;|&nbsp;&nbsp; <span class="header-cart-num">0</span>&nbsp;<i
-                        class="dropdown-arrow icon transition">&#xe609;</i></a>
-            <ul class="dropdown-layer dropdown-right">
-                <!--<li class="dropdown-loading"></li>-->
-                <!--<li><a href="javascript:;" target="_blank" class="menu-item">123456</a></li>-->
-                <!--<li><a href="javascript:;" target="_blank" class="menu-item">123456</a></li>-->
-                <li class="header-cart-no"><i class="icon header-cart-no-img">&#xe600;</i>购物车里还没有商品<br>赶紧去选购吧!</li>
+        <!--<div class="menu dropdown header-cart fr" data-active="menu">-->
+        <!--    <a href="javascript:;" class="dropdown-toggle"><i class="icon">&#xe60b;</i>&nbsp;&nbsp;&nbsp;购物车-->
+        <!--        &nbsp;&nbsp;|&nbsp;&nbsp; <span class="header-cart-num">0</span>&nbsp;<i-->
+        <!--                class="dropdown-arrow icon transition">&#xe609;</i></a>-->
+        <!--    <ul class="dropdown-layer dropdown-right">-->
+        <!--        &lt;!&ndash;<li class="dropdown-loading"></li>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<li><a href="javascript:;" target="_blank" class="menu-item">123456</a></li>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<li><a href="javascript:;" target="_blank" class="menu-item">123456</a></li>&ndash;&gt;-->
+        <!--        <li class="header-cart-no"><i class="icon header-cart-no-img">&#xe600;</i>购物车里还没有商品<br>赶紧去选购吧!</li>-->
 
-                <!--<li class="header-cart-off">最近加入的商品</li>-->
-                <!--<li class="header-cart-off"></li>-->
-                <!--<li class="header-cart-off"></li>-->
-            </ul>
-        </div>
+        <!--        &lt;!&ndash;<li class="header-cart-off">最近加入的商品</li>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<li class="header-cart-off"></li>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<li class="header-cart-off"></li>&ndash;&gt;-->
+        <!--    </ul>-->
+        <!--</div>-->
     </div>
 </header>
 <!--header end-->
@@ -117,19 +117,21 @@
 
 <div class="focus">
     <div class="container">
-        <div class="category fl">
+        <div id="focus-category" class="category fl">
             <a href="###" target="_blank" class="category-title"><i class="icon">&#xe608;</i>商品分类</a>
             <ul class="category-list">
-                <li class="dropdown" data-active="category" data-load="js/category-detail-1.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-1.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">家用电器</a>
                         <i class="dropdown-arrow">&gt;</i>
                     </div>
                     <div class="dropdown-layer">
-                        <div class="dropdown-loading"></div>
+                        <div class="dropdown-loading">
+
+                        </div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-2.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-2.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">手机</a
                         >、<a href="###" target="_blank" class="dropdown-link">运营商</a
@@ -140,7 +142,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-3.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-3.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">电脑</a
                         >、<a href="###" target="_blank" class="dropdown-link">办公</a>
@@ -150,7 +152,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-4.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-4.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">家居</a
                         >、<a href="###" target="_blank" class="dropdown-link">家具</a
@@ -162,7 +164,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-5.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-5.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">男装</a
                         >、<a href="###" target="_blank" class="dropdown-link">女装</a
@@ -174,7 +176,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-6.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-6.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">化妆</a
                         >、<a href="###" target="_blank" class="dropdown-link">清洁</a
@@ -185,7 +187,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-7.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-7.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">运动户外</a
                         >、<a href="###" target="_blank" class="dropdown-link">钟表</a>
@@ -195,7 +197,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-8.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-8.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">汽车</a
                         >、<a href="###" target="_blank" class="dropdown-link">汽车用品</a>
@@ -205,7 +207,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-9.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-9.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">母婴</a
                         >、<a href="###" target="_blank" class="dropdown-link">玩具乐器</a>
@@ -215,7 +217,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-10.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-10.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">食品</a
                         >、<a href="###" target="_blank" class="dropdown-link">酒类</a
@@ -227,7 +229,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-11.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-11.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">医药保健</a>
                         <i class="dropdown-arrow">&gt;</i>
@@ -236,7 +238,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-12.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-12.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">图书</a
                         >、<a href="###" target="_blank" class="dropdown-link">音像</a
@@ -247,7 +249,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-13.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-13.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">彩票</a
                         >、<a href="###" target="_blank" class="dropdown-link">旅行</a
@@ -259,7 +261,7 @@
                         <div class="dropdown-loading"></div>
                     </div>
                 </li>
-                <li class="dropdown" data-active="category" data-load="js/category-detail-14.json">
+                <li class="dropdown" data-active="category" data-load="js/category/category-detail-14.json">
                     <div class="dropdown-toggle">
                         <a href="###" target="_blank" class="dropdown-link">理财</a
                         >、<a href="###" target="_blank" class="dropdown-link">众筹</a
@@ -274,7 +276,82 @@
             </ul>
         </div>
         <div class="carousel fl"></div>
-        <div class="focus-sidebar fl"></div>
+        <div class="focus-sidebar fr">
+            <div class="focus-news">
+                <div class="focus-news-head">
+                    <h2 class="focus-news-title fl">快报</h2>
+                    <a href="###" target="_blank" class="link fr">更多&gt;</a>
+                </div>
+                <div class="focus-news-body">
+                    <p class="text-ellipsis">
+                        <a href="###" target="_blank" class="link"><strong>[特惠]</strong> 精选图书每满150减50</a>
+                    </p>
+                    <p class="text-ellipsis">
+                        <a href="###" target="_blank" class="link"><strong>[公告]</strong> 因广州图书仓搬仓升级配送延迟</a>
+                    </p>
+                    <p class="text-ellipsis">
+                        <a href="###" target="_blank" class="link"><strong>[特惠]</strong> 爆款手机12期免息</a>
+                    </p>
+                    <p class="text-ellipsis">
+                        <a href="###" target="_blank" class="link"><strong>[公告]</strong> 广东、福建受台风影响配送延迟</a>
+                    </p>
+                    <p class="text-ellipsis">
+                        <a href="###" target="_blank" class="link"><strong>[特惠]</strong> 大闸蟹领券满399减180</a>
+                    </p>
+                </div>
+            </div>
+            <div class="focus-service cf">
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe612;</i>
+                    <span class="focus-service-text">话费</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe611;</i>
+                    <span class="focus-service-text">机票</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe607;</i>
+                    <span class="focus-service-text">电影票</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe60e;</i>
+                    <span class="focus-service-text">游戏</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe605;</i>
+                    <span class="focus-service-text">彩票</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe603;</i>
+                    <span class="focus-service-text">加油卡</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe602;</i>
+                    <span class="focus-service-text">酒店</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe601;</i>
+                    <span class="focus-service-text">火车票</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe60d;</i>
+                    <span class="focus-service-text">众筹</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe60c;</i>
+                    <span class="focus-service-text">理财</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe610;</i>
+                    <span class="focus-service-text">礼品卡</span>
+                </a>
+                <a href="###" target="_blank" class="focus-service-item fl">
+                    <i class="icon focus-service-icon">&#xe60f;</i>
+                    <span class="focus-service-text">白条</span>
+                </a>
+            </div>
+            <div class="focus-ad"></div>
+        </div>
     </div>
 </div>
 
